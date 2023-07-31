@@ -26,9 +26,39 @@ body{
     height: 210px;
     border-radius: 5px;
 }
+.image{
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.layer{
+    position: absolute;
+    top: -100%;
+    right: 0;
+    background-color: rgba(0, 255, 247,.4);
+    border-radius: 5px;
+    height: 210px;  
+    transition: all 0.3s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image:hover .layer{
+    top: 0;
+}
+.image .view {
+    width: 30px;
+    height: 30px;
+}
 .eth-info h4{
     color: white;
     margin: 10px 0;
+    transition: all 0.4s;
+}
+.eth-info h4:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 .eth-info p{
     color: hsl(215, 20%, 51%);
@@ -76,4 +106,9 @@ body{
 }
 .profile span{
     color: white;
+    transition: all 0.3s;
+}
+.profile span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
